@@ -52,7 +52,7 @@ export default function NavBar() {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 bg-black opacity-70 lg:bg-transparent justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                        className={`flex-1 bg-black opacity-70 md:bg-transparent lg:bg-transparent justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
                             navbar ? "block" : "hidden"
                         }`}
                     >
@@ -61,7 +61,7 @@ export default function NavBar() {
                                 <Link>Home</Link>
                             </li>
                             <li className="text-gray-600 hover:text-orange-400">
-                                <Link>Blog</Link>
+                                <Link to="/Gallery">Gallery</Link>
                             </li>
                             <li className="text-gray-600 hover:text-orange-400">
                                 <Link>About US</Link>
