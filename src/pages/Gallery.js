@@ -1,5 +1,6 @@
 import Carousel from "../components/Carousel";
 import Nav from "../components/Nav"
+import React from 'react'
 
 const slides = [
     "https://images.unsplash.com/photo-1554941829-202a0b2403b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",

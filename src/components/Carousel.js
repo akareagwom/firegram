@@ -1,5 +1,6 @@
 import angleR from '../images/angle-right.svg'
 import angleL from '../images/angle-left.svg'
+import React from 'react'
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
 const Carousel = ({children:slides}) => {
