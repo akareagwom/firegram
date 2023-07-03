@@ -2,6 +2,7 @@
 // import './App.css';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import React from 'react';
+import LandingPage from './pages/landingPage'
 
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           
-          {/* <Route path='' element= {<LandingPage/>}/>
-          <Route path='/Gallery' element= {<Gallery/>}/> */}
+          <Route path='' element= {<LandingPage/>}/>
+          {/* <Route path='/Gallery' element= {<Gallery/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>
