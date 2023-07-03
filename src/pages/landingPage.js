@@ -6,6 +6,7 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import Background from '../images/orange-background.avif'
 
 export default function LandingPage() {
   const bull = (
@@ -17,7 +18,8 @@ export default function LandingPage() {
   </Box>
 );
   return (
-    <div>
+    <Box>
+      <img src={Background} width={"100px"} height={"100px"} alt='asset'/>
            <Card sx={{ minWidth: 275 }}>
        <CardContent>
          <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
@@ -40,7 +42,7 @@ export default function LandingPage() {
        </CardActions>
      </Card>
       
-    </div>
+    </Box>
   );
 }
 
