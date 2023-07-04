@@ -32,3 +32,5 @@ export {auth,provider};
 
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
+
+export {projectStorage,projectFirestore}
