@@ -1,8 +1,10 @@
 // Import the functions you need from the SDKs you need
+import * as firebase from 'firebase/app'
 import { initializeApp } from "firebase/app";
 import {getAuth,GoogleAuthProvider} from 'firebase/auth'
+// import 'firebase/storage';
 import 'firebase/storage';
-import 'firebase/firestore'
+import 'firebase/firestore';
 
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,9 +22,13 @@ const firebaseConfig = {
   measurementId: "G-LRZTWB8L9V"
 };
 
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 export {auth,provider};
+
+const projectStorage = firebase.storage();
+const projectFirestore = firebase.firestore();
