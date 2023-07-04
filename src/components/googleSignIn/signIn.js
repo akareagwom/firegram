@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Card, Typography } from '@mui/material';
 import {auth,provider} from './config';
 import {signInWithPopup} from "firebase/auth"
 import { useEffect, useState } from 'react';
@@ -19,9 +19,21 @@ const SignIn = () => {
     //     setValue=(localStorage.getItem("email"))
     // })
 
+    
+
     return ( 
         <>
-        {value?<Redirect/>:<Button onClick={handleClick}>SignIn With Google</Button>}
+        {value?<Redirect/>:
+        <Card sx={{width:"35%",bgcolor: 'warning.light'}} >
+            <Typography>
+                SignIn
+            </Typography>
+            <Typography>
+                Welcome To Firegram
+            </Typography>
+        <Button onClick={handleClick}>SignIn With Google</Button>
+        </Card>
+            }
         
         </>
      );

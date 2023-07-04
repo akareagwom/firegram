@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 // import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Button } from '@mui/material';
-// import MenuIcon from '@mui/icons-material/MenuIcon';
+import MenuIcon from '@mui/icons-material/Menu';
 // import Button from '@mui/material/Button';
 
 const Redirect = () => {
@@ -14,7 +14,7 @@ const Redirect = () => {
     <>
     
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar sx={{bgcolor:'warning.light'}} position="static">
         <Toolbar>
           <IconButton
             size="large"
@@ -24,12 +24,12 @@ const Redirect = () => {
             sx={{ mr: 2 }}
           >
             
-            {/* <MenuIcon /> */}
+            <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Firegram
           </Typography>
-          <Button>login</Button>
+          <Button sx={{color:'whitesmoke'}} >logout</Button>
         </Toolbar>
       </AppBar>
     </Box>
