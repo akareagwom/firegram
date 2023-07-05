@@ -1,9 +1,10 @@
-import { FormControl } from "@mui/material";
+import { Box, FormControl } from "@mui/material";
 import React from "react";
 import {useState} from 'react'
 
 const UploadForm = () => {
     const [file,setFile] = useState(null);
+    const [error, setError] = useState(null)
 
     const types = ['image/png','image/jpg','image/jpeg','image/gif','image/avif']
 
@@ -12,7 +13,8 @@ const UploadForm = () => {
         if(selected && types.includes(selected.type)){
             setFile(selected)
         }else{
-            setFile(null)
+            setFile(null);
+            setError('whose ya mate?');
         }
     }
 
@@ -20,6 +22,9 @@ const UploadForm = () => {
         <>
         <FormControl>
             <input type="file" onChange={changeHandler}/>
+            <Box className="output">
+                {error && <Box className="">{error}</Box>}
+            </Box>
         </FormControl>
         </>
      );
