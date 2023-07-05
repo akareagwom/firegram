@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import { Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import UploadForm from '../components/uploadForm';
 // import Button from '@mui/material/Button';
 
 const Redirect = () => {
@@ -32,6 +33,7 @@ const Redirect = () => {
           <Button sx={{color:'whitesmoke'}} >logout</Button>
         </Toolbar>
       </AppBar>
+      <UploadForm />
     </Box>
         </>
      );
