@@ -7,7 +7,7 @@ const UseStorage = (file) => {
     const [url, setUrl] = useState()
 
     useEffect(() =>{
-        const storageRef = projectStorage.ref();
+        const storageRef = projectStorage.ref(file.name);
     },[file])
     
 
