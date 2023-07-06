@@ -33,7 +33,7 @@ const provider = new GoogleAuthProvider();
 export {auth,provider};
 
 
-const projectStorage = firebase.storage();
-const projectFirestore = firebase.firestore();
+// const projectStorage = firebase.storage();
+// const projectFirestore = firebase.firestore();
 
-export {projectStorage,projectFirestore}
+// export {projectStorage,projectFirestore}

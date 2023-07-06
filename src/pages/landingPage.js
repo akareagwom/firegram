@@ -13,6 +13,7 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { useTheme } from '@mui/material/styles';
+import UploadForm from '../components/uploadForm';
 
   
 
@@ -29,6 +30,7 @@ export default function LandingPage() {
   return (
     <Box>
       <SignIn/>      
+      {/* <UploadForm/> */}
     </Box>
   );
 }

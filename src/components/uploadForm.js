@@ -1,6 +1,7 @@
 import { Box, FormControl } from "@mui/material";
 import React from "react";
 import {useState} from 'react'
+import AddIcon from '@mui/icons-material/Add';
 
 const UploadForm = () => {
     const [file,setFile] = useState(null);
@@ -22,8 +23,42 @@ const UploadForm = () => {
 
     return ( 
         <>
-        <FormControl>
-            <input type="file" onChange={changeHandler}/>
+        <FormControl
+        sx={{
+
+        }}
+        >
+            <label>
+                <Box sx={{
+                    display:"none",
+                    bgcolor: 'warning.light',
+                     visibilty:"none",
+                    
+                     
+                     }}>
+                    <input  type="file" onChange={changeHandler}/>
+                </Box>
+            <Box
+            sx={{
+                alignItems: 'center',
+                alignContent: 'center',
+                marginLeft: '40%'
+           }} >
+            <Box
+            border="1px solid black"
+            >
+                <span>
+                    <AddIcon
+                    size="large"
+                    edge="start"
+                    color="inherit"
+                    aria-label="menu"
+                    sx={{ mr: 2 }}/>
+                </span>
+            </Box>
+          
+            </Box>
+            </label>
             <Box className="output">
                 {error && <Box className="">{error}</Box>}
                  {file && <Box>{file.name}</Box>}

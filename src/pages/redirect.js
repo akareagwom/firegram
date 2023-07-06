@@ -33,7 +33,14 @@ const Redirect = () => {
           <Button sx={{color:'whitesmoke'}} >logout</Button>
         </Toolbar>
       </AppBar>
-      <UploadForm />
+      <Box
+      sx={{
+        marginLeft:'50%'
+      }}
+      >
+        <UploadForm />
+      </Box>
+      
     </Box>
         </>
      );
