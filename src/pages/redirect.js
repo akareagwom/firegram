@@ -35,7 +35,8 @@ const Redirect = () => {
       </AppBar>
       <Box
       sx={{
-        marginLeft:'50%'
+        marginLeft:'50%',
+        marginTop:"2%"
       }}
       >
         <UploadForm />

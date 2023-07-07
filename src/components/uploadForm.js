@@ -45,13 +45,18 @@ const UploadForm = () => {
                 marginLeft: '40%'
            }} >
             <Box
-            border="1px solid black"
+            border="2px solid"
+            borderRadius="50%"
+            borderColor="warning.light"
+            color="warning.light"
+            width="40px"
             >
                 <span>
                     <AddIcon
                     size="large"
-                    edge="start"
-                    color="inherit"
+                    edge="end"
+                    marginLeft="20%"
+                    color="warning.light"
                     aria-label="menu"
                     sx={{ mr: 2 }}/>
                 </span>
