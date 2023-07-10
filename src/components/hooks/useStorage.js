@@ -8,6 +8,7 @@ const UseStorage = (file) => {
 
     useEffect(() =>{
         const storageRef = projectStorage.ref(file.name);
+        storageRef.put(file).on('state_changed')
     },[file])
     
 
