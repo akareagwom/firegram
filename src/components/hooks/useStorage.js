@@ -21,10 +21,8 @@ const UseStorage = (file) => {
         })
     },[file])
     
+    return {progress,error,url}
 
-    return ( 
-        <></>
-     );
 }
  
 export default UseStorage;
