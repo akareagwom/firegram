@@ -9,8 +9,9 @@ const UseStorage = (file) => {
     useEffect(() =>{
         const storageRef = projectStorage.ref(file.name);
         //asynchronous function
-        storageRef.put(file).on('state_changed',(snap)=>{
-            let percentage = (snap.bytesTransferred)
+        storageRef.put(file).on('state_changed',(snap)=>{ad
+            //percentage of uplo
+            let percentage = (snap.bytesTransferred/snap.totalBytes)*100;
         })
     },[file])
     
