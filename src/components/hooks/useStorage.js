@@ -13,6 +13,11 @@ const UseStorage = (file) => {
             //percentage of upload
             let percentage = (snap.bytesTransferred/snap.totalBytes)*100;
             setProgress(percentage)
+        }, (err) =>{
+            setError(err);
+        }, async()=>{
+            const url = await storageRef.getDownloadURL();
+            setUrl(url);
         })
     },[file])
     
