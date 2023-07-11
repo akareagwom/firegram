@@ -2,6 +2,7 @@ import { Box, FormControl } from "@mui/material";
 import React from "react";
 import {useState} from 'react'
 import AddIcon from '@mui/icons-material/Add';
+import ProgressBar from "./progressBar";
 
 const UploadForm = () => {
     const [file,setFile] = useState(null);
@@ -67,6 +68,7 @@ const UploadForm = () => {
             <Box className="output">
                 {error && <Box className="">{error}</Box>}
                  {file && <Box>{file.name}</Box>}
+                 {file && <ProgressBar file={file} setFile={setFile}/> }
             </Box>
         </FormControl>
         </>
