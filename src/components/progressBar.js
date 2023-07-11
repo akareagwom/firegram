@@ -6,7 +6,9 @@ const ProgressBar = ({file,setFile}) => {
     const {url, progress} = UseStorage(file);
     console.log(progress,url);
     return ( 
-       <Box>progress</Box>
+       <Box 
+       sx={{width: progress + '%'}}
+        >progress</Box>
      );
 }
  
