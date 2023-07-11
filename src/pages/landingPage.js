@@ -29,8 +29,8 @@ export default function LandingPage() {
 );
   return (
     <Box>
-      <SignIn/>      
-      {/* <UploadForm/> */}
+      {/* <SignIn/>       */}
+      <UploadForm/>
     </Box>
   );
 }
