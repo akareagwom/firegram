@@ -37,9 +37,9 @@ const UseStorage = (file) => {
    async() => {
      // Handle successful uploads on complete
      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-     const url= await  getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+     const url= await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
        console.log('File available at', downloadURL);
-       setUrl(url)
+    //    setUrl(url)
      });
    }
  );
