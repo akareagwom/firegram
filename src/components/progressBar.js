@@ -10,7 +10,9 @@ const ProgressBar = ({file,setFile}) => {
        position="relative"
        display="flex"
         >
-         <CircularProgress value={progress} />
+         <CircularProgress value={progress}
+         color="secondary"
+         />
          <Typography
          sx={{
           top: 0,

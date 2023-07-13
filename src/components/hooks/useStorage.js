@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
-import {projectStorage} from '../googleSignIn/config'
+import {projectStorage,projectFirestore} from '../googleSignIn/config'
 import { ref,uploadBytesResumable, getDownloadURL} from 'firebase/storage'
+import { collection } from 'firebase/firestore';
 
 
 const UseStorage = (file) => {
@@ -12,12 +13,11 @@ const UseStorage = (file) => {
          // const projectStorage = getStorage();
     
          const storageRef = ref(projectStorage,`images/${file.name}`);
+         const collectionRef = collection(projectFirestore, 'images')
          const uploadTask = uploadBytesResumable(storageRef, file);
  
          uploadTask.on('state_changed', 
    (snapshot) => {
-     // Observe state change events such as progress, pause, and resume
-     // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
      const percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
      setProgress(percentage)
      console.log('Upload is ' + percentage + '% done');
@@ -35,12 +35,9 @@ const UseStorage = (file) => {
      // Handle unsuccessful uploads
    }, 
    async() => {
-     // Handle successful uploads on complete
-     // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-     const url= await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-       console.log('File available at', downloadURL);
-    //    setUrl(url)
-     });
+    const url = await getDownloadURL(uploadTask.snapshot);
+    collectionRef({url});
+    setUrl(url);
    }
  );
  
