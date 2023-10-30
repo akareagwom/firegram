@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
-import SignIn from '../components/googleSignIn/signIn';
+// import SignIn from '../components/googleSignIn/signIn';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -13,7 +13,9 @@ import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import SkipNextIcon from '@mui/icons-material/SkipNext';
 import { useTheme } from '@mui/material/styles';
-import UploadForm from '../components/uploadForm';
+// import UploadForm from '../components/uploadForm';
+import { NavBar } from '../components/navigation/navBar';
+import Profile from '../components/layout/profile';
 
   
 
@@ -28,9 +30,13 @@ export default function LandingPage() {
   </Box>
 );
   return (
-    <Box>
-      {/* <SignIn/>       */}
-      <UploadForm/>
+    <Box 
+    padding={0}
+    margin={0}>
+      <NavBar/>
+      <Box margin={5}>
+        <Profile/>
+      </Box>
     </Box>
   );
 }
